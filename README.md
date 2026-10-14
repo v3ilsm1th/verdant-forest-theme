@@ -2,10 +2,6 @@
 
 A dark aesthetic, forest-green theme for [Obsidian](https://obsidian.md) — deep green-black surfaces, a muted moss accent, and soft sage text. Verdant ships with both a **dark** and a **light** (misty forest morning) mode.
 
-![Theme screenshot](screenshots/screenshot.png)
-
-> Replace `screenshots/screenshot.png` with a 16:9 screenshot (recommended: 512×288 or larger) of your theme before submitting.
-
 ---
 
 ## Features
@@ -62,37 +58,7 @@ npm run lint
 
 The lint step uses [`stylelint-config-obsidianmd`](https://github.com/obsidianmd/stylelint-config), the same rules the Community Themes reviewers apply. Keep `theme.css` free of `!important`, external URLs, `:has()`, and named colors.
 
-## Releasing a new version
 
-1. Bump the version in `package.json` (and update `manifest.json` via the helper):
-
-   ```bash
-   npm version patch   # or minor / major
-   ```
-
-   This runs `version-bump.mjs`, which syncs `manifest.json` and `versions.json`.
-
-2. Commit and push a matching tag:
-
-   ```bash
-   git commit -am "Release vX.Y.Z"
-   git tag vX.Y.Z
-   git push && git push --tags
-   ```
-
-3. The `Release Obsidian theme` GitHub Action creates a **draft** release with `manifest.json` and `theme.css` attached. Publish the draft on GitHub.
-
-## Submitting to the Community Themes directory
-
-1. Push this repository to GitHub (name it e.g. `obsidian-verdant-theme`).
-2. Fill in the placeholders: `name`, `author`, and `authorUrl` in `manifest.json`, and the copyright holder in `LICENSE` and `README.md`.
-3. Add a 16:9 screenshot at `screenshots/screenshot.png`.
-4. Publish a GitHub release whose tag matches `manifest.json`'s `version` (see above).
-5. Go to [community.obsidian.md](https://community.obsidian.md) → **Themes → New theme**, and submit:
-   - the repository URL,
-   - your GitHub username as owner,
-   - the screenshot path (`screenshots/screenshot.png`),
-   - the supported modes: `dark` and `light`.
 
 The directory reads `manifest.json` from the default branch, and users install `manifest.json` + `theme.css` from the matching release — so keep both in the repo root and always release via tags.
 
